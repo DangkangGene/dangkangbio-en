@@ -1,0 +1,16 @@
+# GitHub Pages
+.github/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node (if using build tools later)
+node_modules/
