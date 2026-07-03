@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RPA Enzyme Systems - Recombinase Polymerase Amplification enzyme components, reaction mechanism, detection strategies and PubMed literature reviews. Dangkang Bio provides high-quality RPA enzymes for isothermal nucleic acid amplification.">
+  <meta name="keywords" content="RPA enzyme, recombinase, UvsX, Bsu polymerase, gene 32 protein, isothermal amplification, SSB, nucleic acid detection, PubMed, CRISPR-RPA">
+  <title>RPA Enzymes | Dangkang Gene</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ===== RPA Enzymes Page Specific Styles ===== */
+
+    /* Hero Banner */
+    .rpa-hero {
+      background: linear-gradient(135deg, #1a5276 0%, #2980b9 50%, #1a5276 100%);
+      color: var(--text-white);
+      padding: 140px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rpa-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50Z' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+      opacity: 0.3;
+    }
+
+    .rpa-hero h1 {
+      font-size: 2.8rem;
+      color: var(--text-white);
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rpa-hero .hero-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 750px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rpa-hero .dna-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    /* Component Cards */
+    .component-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid var(--primary-light);
+      transition: all var(--transition-normal);
+    }
+
+    .component-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .component-card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .component-card .source-tag {
+      display: inline-block;
+      background: var(--bg-blue-light);
+      color: var(--primary-light);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .component-card .params-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .component-card .param-item {
+      text-align: center;
+      padding: 0.75rem;
+      background: var(--bg-light);
+      border-radius: 8px;
+    }
+
+    .component-card .param-item .param-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .component-card .param-item .param-label {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 0.25rem;
+    }
+
+    /* Mechanism Steps */
+    .mechanism-timeline {
+      position: relative;
+      padding-left: 3rem;
+      margin: 2rem 0;
+    }
+
+    .mechanism-timeline::before {
+      content: '';
+      position: absolute;
+      left: 1.25rem;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary-light), var(--accent-cyan));
+      border-radius: 3px;
+    }
+
+    .mechanism-step {
+      position: relative;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: var(--text-white);
+      border-radius: 10px;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+    }
+
+    .mechanism-step:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+
+    .mechanism-step::before {
+      content: attr(data-step);
+      position: absolute;
+      left: -3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--primary-light);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(41, 128, 185, 0.4);
+    }
+
+    .mechanism-step h4 {
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Detection Strategy Cards */
+    .detection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .detection-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border-top: 3px solid var(--primary-light);
+      transition: all var(--transition-normal);
+    }
+
+    .detection-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-top-color: var(--accent-cyan);
+    }
+
+    .detection-card .detection-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent-cyan));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .detection-card h4 {
+      color: var(--primary-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Literature Cards */
+    .literature-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--accent-blue);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+
+    .literature-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+      border-left-color: var(--accent-cyan);
+    }
+
+    .literature-card .lit-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent-cyan));
+      color: white;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .literature-card h3 {
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .literature-card .lit-meta {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .literature-card .lit-meta span {
+      margin-right: 1rem;
+    }
+
+    .literature-card .lit-meta i {
+      margin-right: 0.25rem;
+      color: var(--primary-light);
+    }
+
+    .literature-card .lit-summary {
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .literature-card .lit-highlights {
+      background: var(--bg-blue-light);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .literature-card .lit-highlights h5 {
+      color: var(--primary-dark);
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .literature-card .lit-highlights ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .literature-card .lit-highlights ul li {
+      padding: 0.25rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+      font-size: 0.9rem;
+    }
+
+    .literature-card .lit-highlights ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-weight: bold;
+    }
+
+    .literature-card .lit-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .literature-card .lit-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: var(--primary-dark);
+      transition: all var(--transition-fast);
+    }
+
+    .literature-card .lit-links a:hover {
+      background: var(--primary-light);
+      color: white;
+      border-color: var(--primary-light);
+    }
+
+    .literature-card .lit-relevance {
+      background: linear-gradient(135deg, #eaf4fc, #d5e8f5);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--primary-dark);
+    }
+
+    .literature-card .lit-relevance strong {
+      color: var(--primary-light);
+    }
+
+    /* Comparison Table */
+    .comparison-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--text-white);
+    }
+
+    .comparison-table thead {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+      color: white;
+    }
+
+    .comparison-table th {
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .comparison-table td {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+
+    .comparison-table tbody tr:hover {
+      background: var(--bg-blue-light);
+    }
+
+    .comparison-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table .rpa-advantage {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    /* Application Cards */
+    .application-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .application-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .application-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .application-card .app-icon {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent-cyan));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.3rem;
+    }
+
+    .application-card h4 {
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .application-card p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .rpa-cta {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+      color: white;
+      text-align: center;
+      padding: 5rem 0;
+    }
+
+    .rpa-cta h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .rpa-cta p {
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .rpa-cta .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      background: white;
+      color: var(--primary-dark);
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all var(--transition-normal);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .rpa-cta .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      color: var(--primary-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .rpa-hero h1 {
+        font-size: 2rem;
+      }
+
+      .rpa-hero .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .component-card {
+        padding: 1.5rem;
+      }
+
+      .mechanism-timeline {
+        padding-left: 2.5rem;
+      }
+
+      .mechanism-step::before {
+        left: -2.5rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
+      }
+
+      .literature-card {
+        padding: 1.5rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">DK</div>
+          <div class="logo-text">
+            <span class="logo-name">Dangkang Bio</span>
+            <span class="logo-tagline">Precision Detection</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rpa-enzymes.html" class="active">RPA Enzymes</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="rpa-hero">
+    <div class="container">
+      <div class="dna-icon"><i class="fas fa-dna"></i></div>
+      <h1>RPA Enzyme Systems & Applications</h1>
+      <p class="hero-subtitle">Advancing Isothermal Nucleic Acid Amplification Through Enzyme Innovation</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Core RPA Enzyme Components -->
+  <section class="section" id="components">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Core RPA Enzyme Components</h2>
+        <p>The recombinase polymerase amplification system relies on three essential enzyme components working in concert to achieve rapid, isothermal DNA amplification</p>
+      </div>
+
+      <!-- UvsX Recombinase -->
+      <div class="component-card fade-in">
+        <h3><i class="fas fa-sync-alt" style="color: var(--primary-light); margin-right: 0.5rem;"></i>UvsX Recombinase</h3>
+        <span class="source-tag"><i class="fas fa-virus"></i> Derived from T4 Bacteriophage</span>
+        <p>UvsX is a strand exchange protein that forms a helical nucleoprotein filament with primers. This recombinase-oligonucleotide complex then scans double-stranded DNA templates for homologous sequences and catalyses strand invasion, creating a displacement loop (D-loop) structure that enables primer annealing without thermal denaturation.</p>
+        <p>UvsX requires ATP hydrolysis to drive the strand exchange reaction and functions optimally in the presence of molecular crowding agents such as polyethylene glycol (PEG), which mimic the intracellular environment and enhance recombination efficiency.</p>
+        <div class="params-grid">
+          <div class="param-item">
+            <div class="param-value">~38 kDa</div>
+            <div class="param-label">Molecular Weight</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">37–42°C</div>
+            <div class="param-label">Optimal Temperature</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">ATP + PEG</div>
+            <div class="param-label">Required Cofactors</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">6–12 mM</div>
+            <div class="param-label">Mg²⁺ Concentration</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bsu Large Fragment DNA Polymerase -->
+      <div class="component-card fade-in">
+        <h3><i class="fas fa-project-diagram" style="color: var(--primary-light); margin-right: 0.5rem;"></i>Bsu Large Fragment DNA Polymerase</h3>
+        <span class="source-tag"><i class="fas fa-bacteria"></i> Derived from Bacillus subtilis</span>
+        <p>The Bsu Large Fragment is a 5'→3' DNA polymerase lacking 5'→3' exonuclease activity, obtained by proteolytic removal of the N-terminal domain of the native Bsu polymerase. This strand-displacing DNA polymerase extends the primer from its 3' hydroxyl end, synthesising the complementary strand while simultaneously displacing the downstream strand.</p>
+        <p>Its intrinsic strand displacement activity eliminates the need for a separate helicase, distinguishing RPA from other isothermal amplification methods such as LAMP or HDA. The enzyme operates efficiently at the mild reaction temperatures characteristic of RPA.</p>
+        <div class="params-grid">
+          <div class="param-item">
+            <div class="param-value">~68 kDa</div>
+            <div class="param-label">Molecular Weight (Large Fragment)</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">37–42°C</div>
+            <div class="param-label">Optimal Temperature</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">5'→3' Pol</div>
+            <div class="param-label">Polymerase Activity</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">Strong</div>
+            <div class="param-label">Strand Displacement</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- T4 Gene 32 Protein / SSB -->
+      <div class="component-card fade-in">
+        <h3><i class="fas fa-shield-alt" style="color: var(--primary-light); margin-right: 0.5rem;"></i>T4 Gene 32 Protein (gp32) — SSB</h3>
+        <span class="source-tag"><i class="fas fa-virus"></i> Derived from T4 Bacteriophage</span>
+        <p>The T4 Gene 32 protein functions as a single-stranded DNA binding protein (SSB). Its primary role in the RPA system is to stabilise the displaced single-stranded DNA strand generated during strand invasion by the recombinase-primer complex.</p>
+        <p>By coating and protecting the displaced strand, gp32 prevents re-annealing of the two complementary DNA strands and blocks branch migration from reversing the D-loop structure. This ensures the primer remains annealed at the target site and is not expelled, thereby facilitating efficient polymerase extension and exponential amplification.</p>
+        <div class="params-grid">
+          <div class="param-item">
+            <div class="param-value">~32 kDa</div>
+            <div class="param-label">Molecular Weight</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">37–42°C</div>
+            <div class="param-label">Optimal Temperature</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">ssDNA Binding</div>
+            <div class="param-label">Primary Function</div>
+          </div>
+          <div class="param-item">
+            <div class="param-value">Cooperative</div>
+            <div class="param-label">Binding Mode</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: RPA Reaction Mechanism -->
+  <section class="section section-alt" id="mechanism">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>RPA Reaction Mechanism</h2>
+        <p>The molecular mechanism of recombinase polymerase amplification proceeds through a coordinated series of enzymatic steps at a constant temperature</p>
+      </div>
+
+      <div class="mechanism-timeline fade-in">
+        <div class="mechanism-step" data-step="1">
+          <h4>Recombinase–Primer Complex Formation</h4>
+          <p>UvsX recombinase binds to the oligonucleotide primer in the presence of ATP, forming a right-handed helical nucleoprotein filament. This active complex is essential for subsequent homology search and strand invasion. The nucleoprotein filament protects the primer from degradation and presents it in a conformation suitable for DNA duplex interrogation.</p>
+        </div>
+
+        <div class="mechanism-step" data-step="2">
+          <h4>Homology Search in Double-Stranded DNA</h4>
+          <p>The recombinase–primer nucleoprotein filament scans the double-stranded DNA template for a homologous sequence matching the primer. This search process is facilitated by the dynamic nature of the filament, which samples local DNA regions through transient opening and re-closing of the duplex, guided by complementary base-pairing potential.</p>
+        </div>
+
+        <div class="mechanism-step" data-step="3">
+          <h4>Strand Invasion & D-Loop Formation</h4>
+          <p>Upon identifying the target homologous site, the recombinase drives the primer strand to invade the double helix, displacing one strand of the duplex and forming a displacement loop (D-loop). The displaced strand is extruded from the duplex structure, creating a single-stranded region available for stabilisation by SSB. This step replaces the thermal denaturation required in PCR.</p>
+        </div>
+
+        <div class="mechanism-step" data-step="4">
+          <h4>SSB Stabilisation of the Displaced Strand</h4>
+          <p>T4 Gene 32 protein (gp32) rapidly binds to and coats the displaced single-stranded DNA, preventing it from re-annealing with the complementary strand. This stabilisation also prevents branch migration from reversing the D-loop and expelling the primer. Without gp32, the invasion intermediate would be transient and unproductive.</p>
+        </div>
+
+        <div class="mechanism-step" data-step="5">
+          <h4>Polymerase Extension</h4>
+          <p>Bsu Large Fragment DNA polymerase recognises the annealed primer at its 3' end within the D-loop structure and initiates DNA synthesis in the 5'→3' direction. As the polymerase extends the primer, its intrinsic strand displacement activity simultaneously displaces the downstream DNA strand, which is immediately bound by SSB (gp32). The full-length amplicon is generated in a single extension step.</p>
+        </div>
+
+        <div class="mechanism-step" data-step="6">
+          <h4>Exponential Amplification Cycle</h4>
+          <p>The newly synthesised strand, freed from the template upon completion of extension, can itself serve as a template for subsequent rounds of recombinase-mediated invasion. Forward and reverse primers operate simultaneously, and with each cycle the number of target amplicon molecules doubles. Combined with the continuous nature of isothermal amplification, this results in exponential accumulation of product within 5–20 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Detection Strategies -->
+  <section class="section" id="detection">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Detection Strategies</h2>
+        <p>RPA amplicons can be detected through multiple complementary strategies, each suited to different application scenarios and resource settings</p>
+      </div>
+
+      <div class="detection-grid fade-in">
+        <div class="detection-card">
+          <div class="detection-icon"><i class="fas fa-bolt"></i></div>
+          <h4>Real-time Fluorescence Detection</h4>
+          <p>Uses Exo probes (exonuclease-sensitive dual-labelled probes) for quantitative, real-time monitoring of amplification. The probe is cleaved by the 5'→3' exonuclease activity during extension, separating the fluorophore from the quencher. Enables kinetic analysis and threshold-based quantification with sensitivity down to single-copy detection.</p>
+        </div>
+
+        <div class="detection-card">
+          <div class="detection-icon"><i class="fas fa-stream"></i></div>
+          <h4>Lateral Flow Assay (LFA)</h4>
+          <p>Employs Nfo probes (nicking endonuclease-sensitive probes) with biotin and FAM labels. After RPA amplification, the product is cleaved by Nt.BstNBI nicking enzyme, and the labelled fragments are visualised on a lateral flow strip within minutes. Ideal for point-of-care, resource-limited settings with no instrumentation required.</p>
+        </div>
+
+        <div class="detection-card">
+          <div class="detection-icon"><i class="fas fa-wave-square"></i></div>
+          <h4>Gel Electrophoresis</h4>
+          <p>Standard agarose gel electrophoresis provides a straightforward, widely accessible method for confirming RPA amplicon presence and approximate size. While not real-time, it offers reliable endpoint analysis and is suitable for laboratories with existing electrophoresis infrastructure. Band intensity correlates with amplification efficiency.</p>
+        </div>
+
+        <div class="detection-card">
+          <div class="detection-icon"><i class="fas fa-cut"></i></div>
+          <h4>CRISPR-Cas Integration</h4>
+          <p>Combining RPA with CRISPR-Cas systems (Cas12a, Cas13a, Cas9) achieves ultra-sensitive, sequence-specific detection. The RPA amplicon activates the Cas effector nuclease, which then cleaves a fluorescent reporter molecule. This RPA-CRISPR cascade delivers attomolar sensitivity and single-base specificity, enabling multiplexed pathogen identification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Application Fields -->
+  <section class="section section-alt" id="applications">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Application Fields</h2>
+        <p>RPA technology is transforming nucleic acid detection across diverse fields, from clinical diagnostics to food safety and environmental monitoring</p>
+      </div>
+
+      <div class="application-grid fade-in">
+        <div class="application-card">
+          <div class="app-icon"><i class="fas fa-virus"></i></div>
+          <div>
+            <h4>Infectious Disease Diagnostics</h4>
+            <p>Rapid detection of HIV, HPV, SARS-CoV-2, HCMV, and other clinically significant pathogens. RPA enables same-visit results in emergency departments, rural clinics, and low-resource settings where PCR infrastructure is unavailable.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="app-icon"><i class="fas fa-apple-alt"></i></div>
+          <div>
+            <h4>Food Safety Testing</h4>
+            <p>Detection of foodborne pathogens including Salmonella, Listeria monocytogenes, E. coli O157:H7, and Vibrio parahaemolyticus. On-site screening reduces turnaround time from days to under 30 minutes, preventing contaminated products from entering the supply chain.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="app-icon"><i class="fas fa-paw"></i></div>
+          <div>
+            <h4>Animal Disease Surveillance</h4>
+            <p>Early detection of African Swine Fever (ASF), Avian Influenza, and other economically devastating animal diseases. Portable RPA systems enable field-level screening on farms, at borders, and during disease outbreaks, supporting rapid containment strategies.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="app-icon"><i class="fas fa-leaf"></i></div>
+          <div>
+            <h4>Environmental Monitoring</h4>
+            <p>Surveillance of water quality, soil microbiomes, and air-borne pathogens. RPA-based biosensors detect trace nucleic acid contamination in environmental samples, supporting regulatory compliance and public health protection.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="app-icon"><i class="fas fa-pills"></i></div>
+          <div>
+            <h4>Antimicrobial Resistance Detection</h4>
+            <p>Rapid identification of antibiotic resistance genes (ARGs) in clinical and environmental isolates. RPA-CRISPR systems distinguish single-nucleotide polymorphisms associated with resistance, informing treatment decisions within hours rather than days.</p>
+          </div>
+        </div>
+
+        <div class="application-card">
+          <div class="app-icon"><i class="fas fa-heartbeat"></i></div>
+          <div>
+            <h4>Zoonotic Disease Monitoring</h4>
+            <p>One Health surveillance of pathogens that transmit between animals and humans. RPA enables simultaneous testing in animal reservoirs and human populations at the human-animal interface, supporting early warning systems for emerging infectious diseases.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: PubMed Literature Reviews -->
+  <section class="section" id="literature">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>PubMed Literature Reviews</h2>
+        <p>Key peer-reviewed publications advancing our understanding of RPA technology, enzyme engineering, and clinical applications</p>
+      </div>
+
+      <!-- Literature 1 -->
+      <div class="literature-card fade-in">
+        <span class="lit-badge">Review · Foundational</span>
+        <h3>Recombinase Polymerase Amplification: Basics, Applications and Recent Advances</h3>
+        <div class="lit-meta">
+          <span><i class="fas fa-users"></i> Lobato I, O'Sullivan CK</span>
+          <span><i class="fas fa-book"></i> Trends in Analytical Chemistry, 2018</span>
+        </div>
+        <p class="lit-summary">A comprehensive review of the RPA platform covering the fundamental principles of recombinase-mediated amplification, primer and probe design guidelines, operational temperature range (22–42°C), and the breadth of detection strategies including fluorescence, lateral flow, and solid-phase formats. The authors highlight how RPA achieves amplification of as few as 1–10 DNA copies within 20 minutes, and discuss integration with microfluidic platforms for automated point-of-care diagnostics.</p>
+        <div class="lit-highlights">
+          <h5>Key Findings</h5>
+          <ul>
+            <li>RPA functions across a broad temperature range (22–42°C) without precision thermal control</li>
+            <li>Sensitivity of 1–10 copies per reaction within 20 minutes</li>
+            <li>Multiple detection modalities: real-time fluorescence, lateral flow, and solid-phase ELISA-like formats</li>
+            <li>Microfluidic integration enables fully automated sample-to-answer workflows</li>
+          </ul>
+        </div>
+        <div class="lit-relevance"><strong>Relevance to Dangkang Bio:</strong> This review validates the core design principles underlying our RPA enzyme kit — optimised UvsX, Bsu polymerase, and gp32 operating at 37–42°C with molecular crowding reagents for maximum efficiency.</div>
+        <div class="lit-links">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/32287544/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PubMed</a>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7112910/" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Full Text (PMC)</a>
+        </div>
+      </div>
+
+      <!-- Literature 2 -->
+      <div class="literature-card fade-in">
+        <span class="lit-badge">Application · LFA</span>
+        <h3>Application of Recombinase Polymerase Amplification with Lateral Flow Assay to Pathogen Point-of-Care Diagnosis</h3>
+        <div class="lit-meta">
+          <span><i class="fas fa-users"></i> Zhao Y, Wei Y, Ye C, et al.</span>
+          <span><i class="fas fa-book"></i> Frontiers in Cellular and Infection Microbiology, 2024</span>
+        </div>
+        <p class="lit-summary">This article systematically evaluates the RPA-LFA combined detection platform for point-of-care pathogen diagnosis. The lateral flow assay enables visual readout within minutes after RPA amplification, eliminating the need for specialised instrumentation. The authors demonstrate that this integrated approach is particularly suited to resource-limited settings where conventional PCR and real-time fluorescence detection are impractical.</p>
+        <div class="lit-highlights">
+          <h5>Key Findings</h5>
+          <ul>
+            <li>RPA-LFA delivers visual results within minutes, requiring no electronic reader</li>
+            <li>Minimal training needed — ideal for field operators and community health workers</li>
+            <li>Cost-effective alternative to PCR for high-volume screening programmes</li>
+            <li>Validated across multiple pathogen targets with consistently high sensitivity and specificity</li>
+          </ul>
+        </div>
+        <div class="lit-relevance"><strong>Relevance to Dangkang Bio:</strong> Our Nfo probe-based RPA kits are purpose-designed for LFA detection. The validated workflow — RPA amplification with Nfo probes followed by lateral flow strip readout — directly mirrors the protocol evaluated in this publication.</div>
+        <div class="lit-links">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/39624267/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PubMed</a>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11609166/" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Full Text (PMC)</a>
+        </div>
+      </div>
+
+      <!-- Literature 3 -->
+      <div class="literature-card fade-in">
+        <span class="lit-badge">Review · CRISPR-RPA</span>
+        <h3>Recent Advances in Rapid Multiplex Detection of Nucleic Acid Markers Using RPA and CRISPR-Cas</h3>
+        <div class="lit-meta">
+          <span><i class="fas fa-users"></i> Li X, Huang Y, Zhang X, et al.</span>
+          <span><i class="fas fa-book"></i> Frontiers in Microbiology, 2026</span>
+        </div>
+        <p class="lit-summary">This review covers the rapidly evolving field of RPA-CRISPR combined detection systems operating at isothermal conditions (37–42°C). The authors categorise multiplexing strategies into dual-tube methods, spatially separated single-tube approaches, and homogeneous single-tube systems. Applications span foodborne pathogen screening, antimicrobial resistance gene analysis, and multi-target clinical diagnostics, all achieving attomolar-level sensitivity.</p>
+        <div class="lit-highlights">
+          <h5>Key Findings</h5>
+          <ul>
+            <li>RPA-CRISPR systems achieve attomolar sensitivity at isothermal 37–42°C conditions</li>
+            <li>Three multiplexing architectures: dual-tube, spatial single-tube, and homogeneous single-tube</li>
+            <li>Applicable to foodborne pathogens, antibiotic resistance genes, and clinical panels</li>
+            <li>Single-base discrimination enables differentiation of closely related pathogen strains</li>
+          </ul>
+        </div>
+        <div class="lit-relevance"><strong>Relevance to Dangkang Bio:</strong> Our RPA enzyme systems are compatible with all three CRISPR integration strategies described. The consistent isothermal conditions (37–42°C) across both RPA and CRISPR steps simplify assay development and workflow design for our customers.</div>
+        <div class="lit-links">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/42182021/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PubMed</a>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13190187/" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Full Text (PMC)</a>
+        </div>
+      </div>
+
+      <!-- Literature 4 -->
+      <div class="literature-card fade-in">
+        <span class="lit-badge">Clinical · HPV Genotyping</span>
+        <h3>A Multiplex RPA-CRISPR/Cas12a-Based POCT Technique and Its Application in Human Papillomavirus (HPV) Typing Assay</h3>
+        <div class="lit-meta">
+          <span><i class="fas fa-users"></i> Liu Y, Chao Z, Ding W, et al.</span>
+          <span><i class="fas fa-book"></i> Biosensors and Bioelectronics, 2024</span>
+        </div>
+        <p class="lit-summary">The authors established a multiplex RPA-CRISPR/Cas12a point-of-care testing system (H-MRC12a) capable of genotyping six high-risk HPV types (16, 18, 31, 33, 35, 45) within 45 minutes. The system achieves a detection depth of 1 copy/μL, making it one of the most sensitive POCT platforms for HPV screening reported to date. Clinical validation confirmed excellent concordance with standard laboratory methods.</p>
+        <div class="lit-highlights">
+          <h5>Key Findings</h5>
+          <ul>
+            <li>Simultaneous genotyping of 6 high-risk HPV types in a single reaction</li>
+            <li>Turnaround time of 45 minutes from sample to result</li>
+            <li>Detection depth of 1 copy/μL — among the most sensitive POCT assays available</li>
+            <li>CRISPR/Cas12a trans-cleavage provides sequence-specific signal generation</li>
+          </ul>
+        </div>
+        <div class="lit-relevance"><strong>Relevance to Dangkang Bio:</strong> This study demonstrates the clinical viability of combining our RPA reagents with CRISPR-Cas12a detection. Our optimised enzyme mix provides the rapid, high-fidelity amplification required for multi-target genotyping assays.</div>
+        <div class="lit-links">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/38459454/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PubMed</a>
+        </div>
+      </div>
+
+      <!-- Literature 5 -->
+      <div class="literature-card fade-in">
+        <span class="lit-badge">Innovation · AI + Microfluidics</span>
+        <h3>Deep Learning-Enhanced Hand-Driven Microfluidic Chip for Multiplexed Nucleic Acid Detection Based on RPA/CRISPR</h3>
+        <div class="lit-meta">
+          <span><i class="fas fa-users"></i> Xu T, Zhang Y, Li S, et al.</span>
+          <span><i class="fas fa-book"></i> Advanced Science, 2025</span>
+        </div>
+        <p class="lit-summary">This study presents the R-CHIP system — a hand-driven microfluidic device integrating RPA amplification, CRISPR-Cas detection, and AI-powered deep learning analysis. The system achieves remarkable sensitivity of 10⁻¹⁷ M for HPV-16 and 10⁻¹⁸ M for HPV-18. Testing on 300 clinical samples demonstrated accuracy exceeding 95%, with the ResNet-18 deep learning model achieving 96–98% prediction accuracy for fluorescent signal classification.</p>
+        <div class="lit-highlights">
+          <h5>Key Findings</h5>
+          <ul>
+            <li>Hand-driven microfluidics eliminates the need for external power sources or pumps</li>
+            <li>Sensitivity: 10⁻¹⁷ M (HPV-16) and 10⁻¹⁸ M (HPV-18)</li>
+            <li>300 clinical samples tested with >95% accuracy vs. reference methods</li>
+            <li>ResNet-18 deep learning model: 96–98% prediction accuracy for signal interpretation</li>
+          </ul>
+        </div>
+        <div class="lit-relevance"><strong>Relevance to Dangkang Bio:</strong> The RPA/CRISPR chemistry validated in R-CHIP is directly compatible with our enzyme formulations. As microfluidic and AI-enhanced diagnostics become mainstream, our RPA reagents are positioned to serve as the amplification engine for next-generation integrated diagnostic platforms.</div>
+        <div class="lit-links">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/40163382/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PubMed</a>
+        </div>
+      </div>
+
+      <!-- Literature 6 -->
+      <div class="literature-card fade-in">
+        <span class="lit-badge">Clinical · HCMV</span>
+        <h3>Rapid and Sensitive Point-of-Care Diagnosis of Human Cytomegalovirus Infection Using RPA-CRISPR Technology</h3>
+        <div class="lit-meta">
+          <span><i class="fas fa-users"></i> Shin K, Seong GM, Yoo JR, Kim ET</span>
+          <span><i class="fas fa-book"></i> Journal of Clinical Microbiology, 2024</span>
+        </div>
+        <p class="lit-summary">The authors developed an HCMV-RPA-CRISPR diagnostic platform capable of detecting human cytomegalovirus infection within 1 hour. The platform detects single-copy levels of positive control plasmid DNA. In testing 13 clinical blood specimens, both fluorescence-based and lateral flow assay readouts demonstrated 100% sensitivity and specificity compared to reference PCR methods, confirming its suitability for clinical diagnostics.</p>
+        <div class="lit-highlights">
+          <h5>Key Findings</h5>
+          <ul>
+            <li>Detection completed within 1 hour from sample to result</li>
+            <li>Single-copy sensitivity for positive control plasmid DNA</li>
+            <li>100% sensitivity and specificity across 13 clinical blood specimens</li>
+            <li>Both fluorescence and LFA readouts validated with concordant results</li>
+          </ul>
+        </div>
+        <div class="lit-relevance"><strong>Relevance to Dangkang Bio:</strong> The dual-readout validation (fluorescence + LFA) mirrors the capabilities of our RPA product range. Our Exo probe kits support real-time fluorescence monitoring, while our Nfo probe kits are designed for LFA strip detection — both validated in this clinical study framework.</div>
+        <div class="lit-links">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/38586394/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PubMed</a>
+        </div>
+      </div>
+
+      <!-- Literature 7 -->
+      <div class="literature-card fade-in">
+        <span class="lit-badge">Landmark · 2006</span>
+        <h3>DNA Detection Using Recombination Proteins</h3>
+        <div class="lit-meta">
+          <span><i class="fas fa-users"></i> Piepenburg O, Williams CH, Stemple DL, Armes NA</span>
+          <span><i class="fas fa-book"></i> PLoS Biology, 2006</span>
+        </div>
+        <p class="lit-summary">The foundational publication that first demonstrated recombinase polymerase amplification as a viable method for isothermal DNA detection. The authors proved that the combination of T4 UvsX recombinase, T4 Gene 32 protein, and Bsu DNA polymerase large fragment can amplify target DNA at 37–42°C within 20 minutes. This landmark paper established the three-enzyme RPA system that remains the basis of all modern RPA assays and commercial kits.</p>
+        <div class="lit-highlights">
+          <h5>Key Findings</h5>
+          <ul>
+            <li>First demonstration of RPA using UvsX + gp32 + Bsu polymerase large fragment</li>
+            <li>Successful amplification at constant 37–42°C — no thermal cycling required</li>
+            <li>Results in under 20 minutes with high specificity</li>
+            <li>Established the enzyme triad that defines all subsequent RPA technology</li>
+          </ul>
+        </div>
+        <div class="lit-relevance"><strong>Relevance to Dangkang Bio:</strong> This is the paper that launched the entire field. Our RPA enzyme products are direct descendants of this pioneering work — we manufacture and optimise the same three-component enzyme system (UvsX, gp32, Bsu LF) for reliable, high-performance isothermal amplification.</div>
+        <div class="lit-links">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/16683841/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PubMed</a>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1463011/" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> Full Text (PMC)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: RPA vs PCR Comparison Table -->
+  <section class="section section-alt" id="comparison">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>RPA vs PCR — A Comparison</h2>
+        <p>Understanding the key advantages of recombinase polymerase amplification over conventional polymerase chain reaction</p>
+      </div>
+
+      <div class="comparison-table-wrapper fade-in">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>RPA</th>
+              <th>PCR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Reaction Temperature</strong></td>
+              <td class="rpa-advantage">37–42°C (isothermal)</td>
+              <td>Thermal cycling (94°C → 55°C → 72°C)</td>
+            </tr>
+            <tr>
+              <td><strong>Time to Result</strong></td>
+              <td class="rpa-advantage">5–20 minutes</td>
+              <td>1–3 hours</td>
+            </tr>
+            <tr>
+              <td><strong>Instrumentation</strong></td>
+              <td class="rpa-advantage">Simple heater / no instrument needed (LFA)</td>
+              <td>Requires precision thermal cycler</td>
+            </tr>
+            <tr>
+              <td><strong>Sensitivity</strong></td>
+              <td class="rpa-advantage">1–10 copies per reaction</td>
+              <td>10–100 copies per reaction</td>
+            </tr>
+            <tr>
+              <td><strong>Portability</strong></td>
+              <td class="rpa-advantage">Fully portable — field & point-of-care ready</td>
+              <td>Laboratory-bound — requires stable power</td>
+            </tr>
+            <tr>
+              <td><strong>Operator Skill</strong></td>
+              <td class="rpa-advantage">Minimal training required</td>
+              <td>Trained technician needed</td>
+            </tr>
+            <tr>
+              <td><strong>Energy Requirement</strong></td>
+              <td class="rpa-advantage">Battery-operated heater sufficient</td>
+              <td>Mains power essential for thermal cycling</td>
+            </tr>
+            <tr>
+              <td><strong>Ideal Application</strong></td>
+              <td class="rpa-advantage">Point-of-care, field testing, resource-limited settings</td>
+              <td>Centralised laboratories, high-throughput screening</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: CTA -->
+  <section class="rpa-cta">
+    <div class="container">
+      <h2>Ready to Explore RPA Enzyme Solutions?</h2>
+      <p>Dangkang Bio provides optimised RPA enzyme kits, custom assay development services, and technical support for your isothermal amplification projects. Contact our team to discuss your application needs.</p>
+      <a href="contact.html" class="btn-cta">
+        <i class="fas fa-envelope"></i> Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">DK</div>
+            <div class="logo-text">
+              <span class="logo-name">Dangkang Bio</span>
+              <span class="logo-tagline">Precision Detection</span>
+            </div>
+          </a>
+          <p>Building precise, convenient and accessible bio-detection products. Leveraging RPA isothermal amplification technology for one-stop solutions worldwide.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="rpa-enzymes.html">RPA Enzymes</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="products.html#reagents">Reagents</a></li>
+            <li><a href="products.html#detection-kits">Detection Kits</a></li>
+            <li><a href="products.html#instruments">Instruments</a></li>
+            <li><a href="products.html#custom">Custom Services</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Wuhan, China</li>
+            <li><i class="fas fa-envelope"></i> dangkangbio@163.com</li>
+            <li><i class="fas fa-phone"></i> +86-18162635786</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Wuhan Dangkang Bio-Technology Co., Ltd. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
