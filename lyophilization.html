@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lyophilization Technology for RPA Enzymes - Room-temperature stable reagents for point-of-care and field diagnostics. Dangkang Bio offers freeze-dried RPA enzyme solutions with extended shelf life.">
+  <meta name="keywords" content="lyophilization, freeze-drying, RPA enzyme, freeze-dried, room temperature storage, point-of-care, field diagnostics, LyoBead, trehalose, cryoprotectant">
+  <title>Lyophilization Technology | Dangkang Gene</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ===== Lyophilization Page Specific Styles ===== */
+
+    /* Hero Banner */
+    .lyo-hero {
+      background: linear-gradient(135deg, #0d3b66 0%, #1a5276 30%, #2980b9 60%, #5dade2 100%);
+      color: var(--text-white);
+      padding: 140px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lyo-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 0L48 16L40 32L32 16Z' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3Cpath d='M0 40L8 56L0 72L-8 56Z' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3Cpath d='M80 40L88 56L80 72L72 56Z' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+      opacity: 0.4;
+    }
+
+    .lyo-hero h1 {
+      font-size: 2.6rem;
+      color: var(--text-white);
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lyo-hero .hero-subtitle {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 750px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lyo-hero .hero-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      opacity: 0.85;
+    }
+
+    /* What is Lyophilization */
+    .lyo-process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .lyo-phase-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      transition: all var(--transition-normal);
+    }
+
+    .lyo-phase-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .lyo-phase-card .phase-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+    }
+
+    .lyo-phase-card h4 {
+      color: var(--primary-dark);
+      margin-bottom: 0.75rem;
+      font-size: 1.15rem;
+    }
+
+    .lyo-phase-card p {
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .lyo-phase-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--primary-light);
+    }
+
+    /* Why Lyophilized Cards */
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .advantage-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      border-top: 4px solid var(--primary-light);
+      transition: all var(--transition-normal);
+    }
+
+    .advantage-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .advantage-card .card-icon {
+      font-size: 2.2rem;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+    }
+
+    .advantage-card h4 {
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .advantage-card p {
+      color: var(--text-gray);
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    /* Technical Challenges */
+    .challenge-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid var(--primary-light);
+      transition: all var(--transition-normal);
+    }
+
+    .challenge-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .challenge-card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .challenge-card h3 i {
+      color: var(--primary-light);
+      margin-right: 0.5rem;
+    }
+
+    .challenge-card p {
+      color: var(--text-gray);
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+
+    .challenge-card ul {
+      padding-left: 1.2rem;
+    }
+
+    .challenge-card ul li {
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+
+    .challenge-card ul li strong {
+      color: var(--primary-dark);
+    }
+
+    /* Product Tables */
+    .product-table-wrapper {
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--text-white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .product-table thead {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    }
+
+    .product-table thead th {
+      color: var(--text-white);
+      padding: 1rem 1.2rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .product-table tbody td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid #eee;
+      font-size: 0.93rem;
+      color: var(--text-gray);
+    }
+
+    .product-table tbody tr:nth-child(even) {
+      background: #f0f7fc;
+    }
+
+    .product-table tbody tr:hover {
+      background: #e3f0fa;
+    }
+
+    .product-table .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .badge-soon {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .badge-custom {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .badge-available {
+      background: #cce5ff;
+      color: #004085;
+    }
+
+    /* Product Sub-section */
+    .product-subsection {
+      margin-bottom: 3rem;
+    }
+
+    .product-subsection h3 {
+      color: var(--primary-dark);
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    .product-subsection h3 i {
+      color: var(--primary-light);
+      margin-right: 0.5rem;
+    }
+
+    /* Industry Applications */
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .app-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+
+    .app-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .app-card .app-icon {
+      font-size: 2.5rem;
+      color: var(--primary-light);
+      margin-bottom: 1rem;
+    }
+
+    .app-card h4 {
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .app-card p {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* Literature Cards */
+    .lit-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid var(--primary-light);
+      transition: all var(--transition-normal);
+    }
+
+    .lit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .lit-card .lit-source {
+      display: inline-block;
+      background: #e3f0fa;
+      color: var(--primary-dark);
+      padding: 0.2rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .lit-card h4 {
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .lit-card .lit-authors {
+      color: var(--text-gray);
+      font-size: 0.88rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .lit-card .lit-journal {
+      font-style: italic;
+      color: var(--primary-light);
+      font-size: 0.88rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .lit-card .lit-summary {
+      color: var(--text-gray);
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
+    .lit-card a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .lit-card a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    /* Process Timeline */
+    .process-timeline {
+      position: relative;
+      margin-top: 3rem;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary-light), var(--primary-dark));
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-content {
+      width: 45%;
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .timeline-content h4 {
+      color: var(--primary-dark);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      z-index: 2;
+    }
+
+    /* Quality Specs */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .spec-card {
+      background: var(--text-white);
+      border-radius: 12px;
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border-bottom: 3px solid var(--primary-light);
+      transition: all var(--transition-normal);
+    }
+
+    .spec-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .spec-card .spec-icon {
+      font-size: 1.8rem;
+      color: var(--primary-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .spec-card .spec-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .spec-card .spec-label {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+    }
+
+    /* CTA Section */
+    .lyo-cta {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+      color: var(--text-white);
+      text-align: center;
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lyo-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='20' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+      opacity: 0.3;
+    }
+
+    .lyo-cta h2 {
+      font-size: 2.2rem;
+      color: var(--text-white);
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lyo-cta p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lyo-cta .cta-highlights {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+
+    .lyo-cta .cta-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .lyo-cta .cta-highlight-item i {
+      font-size: 1.2rem;
+    }
+
+    .lyo-cta .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--text-white);
+      color: var(--primary-dark);
+      padding: 0.9rem 2.2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lyo-cta .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .lyo-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .lyo-process-grid,
+      .advantage-grid,
+      .app-grid,
+      .spec-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even) {
+        flex-direction: row;
+        padding-left: 50px;
+      }
+
+      .timeline-content {
+        width: 100%;
+      }
+
+      .timeline-dot {
+        left: 20px;
+        top: 20px;
+        transform: translate(-50%, 0);
+      }
+
+      .lyo-cta h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .lyo-process-grid,
+      .advantage-grid,
+      .app-grid,
+      .spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">DK</div>
+          <div class="logo-text">
+            <span class="logo-name">Dangkang Bio</span>
+            <span class="logo-tagline">Precision Detection</span>
+          </div>
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="rpa-enzymes.html">RPA Enzymes</a></li>
+          <li><a href="lyophilization.html" class="active">Lyophilization</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section 1: Hero Banner -->
+  <section class="lyo-hero">
+    <div class="container">
+      <div class="hero-icon">
+        <i class="fas fa-snowflake"></i>
+      </div>
+      <h1>Lyophilization Technology for RPA Enzymes</h1>
+      <p class="hero-subtitle">Room-Temperature Stable Reagents for Point-of-Care &amp; Field Diagnostics</p>
+    </div>
+  </section>
+
+  <!-- Section 2: What is Lyophilization -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>What is Lyophilization?</h2>
+        <p>Freeze-drying is a powerful dehydration technology that preserves biological molecules by removing water under vacuum at low temperatures</p>
+      </div>
+
+      <div class="challenge-card fade-in" style="margin-bottom: 1.5rem;">
+        <p>Lyophilization (also known as freeze-drying) is a process in which water is removed from a product through <strong>sublimation</strong> — the direct transition from solid ice to water vapour — without passing through the liquid phase. This gentle dehydration preserves the structure and function of sensitive biological molecules such as proteins, enzymes, and nucleic acids, enabling long-term storage at ambient temperatures.</p>
+      </div>
+
+      <h3 style="text-align:center; color:var(--primary-dark); margin-bottom: 0.5rem; font-size: 1.3rem;">The Three Phases of Lyophilization</h3>
+
+      <div class="lyo-process-grid fade-in">
+        <div class="lyo-phase-card">
+          <div class="phase-number">1</div>
+          <h4><i class="fas fa-temperature-low"></i> Freezing</h4>
+          <p>The product is cooled below its eutectic point (typically -40°C to -80°C), converting all free water into ice crystals. Rapid or controlled freezing determines crystal size and affects downstream drying efficiency.</p>
+        </div>
+        <div class="lyo-phase-card">
+          <div class="phase-number">2</div>
+          <h4><i class="fas fa-wind"></i> Primary Drying</h4>
+          <p>Under vacuum conditions, ice sublimes directly into vapour. This phase removes ~95% of water content. Temperature and pressure are carefully controlled to maintain the frozen matrix while maximising sublimation rate.</p>
+        </div>
+        <div class="lyo-phase-card">
+          <div class="phase-number">3</div>
+          <h4><i class="fas fa-fire"></i> Secondary Drying</h4>
+          <p>Bound (adsorbed) water molecules are removed by gradually raising the temperature (typically 20-40°C) under continued vacuum. Residual moisture is reduced to &lt;1-3%, ensuring long-term stability.</p>
+        </div>
+      </div>
+
+      <div class="challenge-card fade-in" style="margin-top: 2rem; border-left-color: #27ae60;">
+        <h3><i class="fas fa-check-circle" style="color: #27ae60;"></i> Why Lyophilization Matters for Molecular Diagnostics</h3>
+        <ul>
+          <li><strong>Water Removal</strong> — Eliminates the medium for hydrolysis and microbial growth that degrade biological reagents</li>
+          <li><strong>Extended Shelf Life</strong> — Transforms reagents from weeks of refrigerated storage to 12+ months at room temperature</li>
+          <li><strong>Room-Temperature Storage</strong> — Breaks the cold chain dependency, enabling deployment in resource-limited and field settings</li>
+          <li><strong>Reduced Mass &amp; Volume</strong> — Lighter, more compact shipping; no dry ice or refrigerated containers needed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Why Lyophilized RPA Enzymes -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Why Lyophilize RPA Enzymes?</h2>
+        <p>Transforming cold-chain-dependent reagents into room-temperature-stable, ready-to-use diagnostics</p>
+      </div>
+
+      <div class="advantage-grid fade-in">
+        <div class="advantage-card">
+          <div class="card-icon"><i class="fas fa-thermometer-half"></i></div>
+          <h4>Room Temperature Storage</h4>
+          <p>Eliminates the need for -20°C or 4°C cold chain storage. Lyophilized RPA enzymes remain stable at ambient temperatures (15-30°C), simplifying warehouse and lab requirements.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+          <h4>Extended Shelf Life</h4>
+          <p>Extends product stability from weeks (liquid format, refrigerated) to 12 months or more (lyophilized, room temperature). Accelerated stability studies can predict multi-year shelf life.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="card-icon"><i class="fas fa-truck"></i></div>
+          <h4>Simplified Logistics</h4>
+          <p>No dry ice, no refrigerated trucks, no cold rooms. Dramatically reduces shipping costs and complexity — especially critical for remote areas and developing countries.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="card-icon"><i class="fas fa-tint"></i></div>
+          <h4>Point-of-Care Ready</h4>
+          <p>Ready-to-use lyophilized powder format. Simply add water or sample to reconstitute — no pipetting of viscous enzyme stocks, no special equipment needed.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+          <h4>Reduced Errors</h4>
+          <p>Pre-aliquoted lyophilized beads (LyoBeads) eliminate pipetting variability. Each vial contains a precisely dosed, single-reaction amount — minimizing user error in field settings.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="card-icon"><i class="fas fa-globe-asia"></i></div>
+          <h4>Field-Deployable</h4>
+          <p>Perfectly suited for on-site testing: veterinary field diagnostics, environmental sampling, border biosecurity, disaster-response testing, and low-resource global health programmes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Key Technical Challenges -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Key Technical Challenges</h2>
+        <p>Dangkang Bio has the expertise and infrastructure to overcome the critical challenges in lyophilizing RPA enzymes</p>
+      </div>
+
+      <div class="challenge-card fade-in">
+        <h3><i class="fas fa-flask"></i> Glycerol-Free Formulation</h3>
+        <p>Traditional enzyme preparations contain glycerol (typically 50% v/v) as a cryoprotectant to prevent ice crystal damage during frozen storage. However, glycerol presents significant problems for lyophilization:</p>
+        <ul>
+          <li><strong>High viscosity</strong> — impedes accurate pipetting and automated dispensing</li>
+          <li><strong>Collapses the lyophilized cake</strong> — glycerol has a low collapse temperature, leading to melted or shrunken product appearance</li>
+          <li><strong>Retains residual moisture</strong> — hygroscopic nature hinders achieving target residual water levels</li>
+          <li><strong>Inhibits downstream reactions</strong> — residual glycerol can affect RPA amplification efficiency</li>
+        </ul>
+        <p>Dangkang Bio develops <strong>glycerol-free enzyme formulations</strong> by optimising expression conditions, purification protocols, and storage buffer composition to maintain enzyme stability without glycerol — ensuring excellent lyophilisation performance and full activity recovery.</p>
+      </div>
+
+      <div class="challenge-card fade-in">
+        <h3><i class="fas fa-vial"></i> Cryoprotectant Selection</h3>
+        <p>Choosing the right cryoprotectant (lyoprotectant) is critical for preserving enzyme activity during freeze-drying and storage:</p>
+        <ul>
+          <li><strong>Trehalose (D-Trehalose)</strong> — The gold standard. Forms a stable glassy matrix (vitrification) that protects protein structure by replacing water hydrogen bonds. Non-reducing sugar prevents Maillard browning reactions.</li>
+          <li><strong>Sucrose</strong> — A cost-effective alternative with similar cryoprotective properties. Widely used in combination with trehalose.</li>
+          <li><strong>D-Trehalose vs. L-Trehalose</strong> — Only D-trehalose (the naturally occurring diastereomer) is suitable for biopreservation. L-trehalose lacks the correct stereochemistry and must be excluded to ensure purity and performance.</li>
+          <li><strong>Concentration Optimisation</strong> — Typically 5-10% (w/v). Too little provides insufficient protection; too much increases viscosity and may reduce enzyme activity per unit volume. Dangkang Bio optimises concentration for each enzyme through systematic screening.</li>
+        </ul>
+      </div>
+
+      <div class="challenge-card fade-in">
+        <h3><i class="fas fa-sliders-h"></i> Lyophilization Cycle Optimisation</h3>
+        <p>Each enzyme product requires a custom lyophilization cycle (recipe) to achieve optimal results:</p>
+        <ul>
+          <li><strong>Pre-freezing Temperature &amp; Time</strong> — Must reach below the product's glass transition temperature (Tg'). Typical range: -40°C to -80°C with controlled ramp rates.</li>
+          <li><strong>Primary Drying — Sublimation Rate Control</strong> — Shelf temperature and chamber pressure are balanced to maximise ice removal rate without collapsing the frozen matrix. Typically 24-48 hours.</li>
+          <li><strong>Secondary Drying — Desorption Temperature</strong> — Gradually raised to 20-40°C to remove bound water. Duration depends on product load and vial configuration.</li>
+          <li><strong>Residual Moisture Control</strong> — Target: &lt;1-3% (w/w). Too high risks chemical/biological degradation; too low may cause protein denaturation from over-drying.</li>
+        </ul>
+      </div>
+
+      <div class="challenge-card fade-in">
+        <h3><i class="fas fa-chart-line"></i> Enzyme Activity Recovery</h3>
+        <p>The ultimate measure of lyophilization success is how much enzymatic activity is retained after the process:</p>
+        <ul>
+          <li><strong>Target: ≥90% activity recovery</strong> — Post-lyophilization enzyme activity compared to fresh (non-lyophilized) control</li>
+          <li><strong>Multiple freeze-thaw stability testing</strong> — Ensures the enzyme tolerates temperature excursions during shipping and use</li>
+          <li><strong>Accelerated stability testing</strong> — Storage at elevated temperatures (37°C, 45°C, 55°C) to predict real-time shelf life using the Arrhenius model</li>
+          <li><strong>Real-time stability monitoring</strong> — Ongoing testing at 25°C and 37°C to validate shelf life claims</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Product Portfolio -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Our Lyophilized Product Portfolio</h2>
+        <p>Dangkang Bio offers a comprehensive range of lyophilized RPA enzyme products — from individual components to ready-to-use master mixes</p>
+      </div>
+
+      <!-- Individual Lyophilized Enzymes -->
+      <div class="product-subsection fade-in">
+        <h3><i class="fas fa-dna"></i> Individual Lyophilized Enzymes</h3>
+        <div class="product-table-wrapper">
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Form</th>
+                <th>Storage</th>
+                <th>Stability</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Lyophilized T4 UvsX Recombinase</strong></td>
+                <td>Powder</td>
+                <td>Room temp (15-30°C)</td>
+                <td>≥12 months</td>
+                <td><span class="badge badge-custom">Available for Custom Development</span></td>
+              </tr>
+              <tr>
+                <td><strong>Lyophilized Bsu DNA Polymerase (LF)</strong></td>
+                <td>Powder</td>
+                <td>Room temp (15-30°C)</td>
+                <td>≥12 months</td>
+                <td><span class="badge badge-custom">Available for Custom Development</span></td>
+              </tr>
+              <tr>
+                <td><strong>Lyophilized T4 Gene 32 Protein (SSB)</strong></td>
+                <td>Powder</td>
+                <td>Room temp (15-30°C)</td>
+                <td>≥12 months</td>
+                <td><span class="badge badge-custom">Available for Custom Development</span></td>
+              </tr>
+              <tr>
+                <td><strong>Lyophilized T4 UvsY Protein</strong></td>
+                <td>Powder</td>
+                <td>Room temp (15-30°C)</td>
+                <td>≥12 months</td>
+                <td><span class="badge badge-custom">Available for Custom Development</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Lyophilized Master Mixes -->
+      <div class="product-subsection fade-in">
+        <h3><i class="fas fa-blender"></i> Lyophilized Master Mixes</h3>
+        <div class="product-table-wrapper">
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Format</th>
+                <th>Reactions/Vial</th>
+                <th>Storage</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Lyophilized RPA Master Mix</strong></td>
+                <td>LyoBead</td>
+                <td>1 rxn/vial</td>
+                <td>Room temp</td>
+                <td><span class="badge badge-soon">Coming Soon</span></td>
+              </tr>
+              <tr>
+                <td><strong>Lyophilized RPA Master Mix</strong></td>
+                <td>Bulk</td>
+                <td>25 / 100 / 500 rxns</td>
+                <td>Room temp</td>
+                <td><span class="badge badge-soon">Coming Soon</span></td>
+              </tr>
+              <tr>
+                <td><strong>Lyophilized RT-RPA Master Mix</strong></td>
+                <td>LyoBead</td>
+                <td>1 rxn/vial</td>
+                <td>Room temp</td>
+                <td><span class="badge badge-custom">Available for Custom Development</span></td>
+              </tr>
+              <tr>
+                <td><strong>Lyophilized RPA-CRISPR Mix</strong></td>
+                <td>LyoBead</td>
+                <td>Custom</td>
+                <td>Room temp</td>
+                <td><span class="badge badge-custom">Available for Custom Development</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Glycerol-Free Liquid Enzymes -->
+      <div class="product-subsection fade-in">
+        <h3><i class="fas fa-prescription-bottle"></i> Glycerol-Free Liquid Enzymes</h3>
+        <div class="challenge-card" style="border-left-color: #2980b9;">
+          <ul>
+            <li><strong>Full-range RPA enzymes available in glycerol-free format</strong> — UvsX, UvsY, gp32, Bsu DNA Polymerase (LF), and creatine kinase</li>
+            <li><strong>Compatible with automated liquid handling systems</strong> — Low viscosity enables precise robotic dispensing on any platform</li>
+            <li><strong>Ready for direct use</strong> — Can be used directly in RPA reactions or as starting material for downstream lyophilization</li>
+            <li><strong>Bulk supply available</strong> — From research quantities (mg scale) to GMP-grade production (gram to kilogram scale)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Custom Lyophilization Services -->
+      <div class="product-subsection fade-in">
+        <h3><i class="fas fa-cogs"></i> Custom Lyophilization Services</h3>
+        <div class="challenge-card" style="border-left-color: #27ae60;">
+          <ul>
+            <li><strong>Primer/probe pre-aliquoted LyoBeads</strong> — Primers, probes, and enzymes co-lyophilized into single-reaction beads for true "add sample and go" workflows</li>
+            <li><strong>Custom cryoprotectant formulations</strong> — Optimised buffer systems tailored to your specific enzyme combination and application</li>
+            <li><strong>Lyophilization cycle development</strong> — Custom freeze-drying recipes developed and validated for your products</li>
+            <li><strong>Scale-up &amp; GMP manufacturing</strong> — From R&amp;D-scale feasibility studies to full-scale cGMP production</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Industry Applications -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Industry Applications of Lyophilized RPA</h2>
+        <p>Freeze-dried RPA enzymes unlock rapid, accurate molecular diagnostics in settings where traditional PCR cannot reach</p>
+      </div>
+
+      <div class="app-grid fade-in">
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-hospital"></i></div>
+          <h4>Infectious Disease POC Testing</h4>
+          <p>Remote clinics, community health centres, and emergency departments — rapid pathogen identification without laboratory infrastructure.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-horse"></i></div>
+          <h4>Veterinary Field Diagnostics</h4>
+          <p>On-farm detection of animal diseases (ASF, FMD, Avian Influenza) — critical for early containment without waiting for lab results.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-utensils"></i></div>
+          <h4>Food Safety Testing</h4>
+          <p>Food processing plants and supply chain checkpoints — rapid screening for pathogens (Salmonella, Listeria, E. coli) at the point of production.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-water"></i></div>
+          <h4>Environmental Monitoring</h4>
+          <p>On-site water quality testing, soil pathogen detection, and industrial hygiene monitoring in the field.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Biodefence &amp; Biosecurity</h4>
+          <p>Border quarantine, biothreat screening, and emergency response — detecting select agents in minutes, not days.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-hand-holding-medical"></i></div>
+          <h4>Low-Resource Global Health</h4>
+          <p>Aligns with WHO ASSURED criteria: Affordable, Sensitive, Specific, User-friendly, Rapid and robust, Equipment-free, Delivered to end-users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Research & Literature -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Research &amp; Literature</h2>
+        <p>Key publications and references supporting the science of lyophilized isothermal amplification technologies</p>
+      </div>
+
+      <div class="fade-in">
+        <!-- Literature 1 -->
+        <div class="lit-card">
+          <span class="lit-source">Industry Reference</span>
+          <h4>Intact Genomics RPA Products Catalog</h4>
+          <p class="lit-journal">Intact Genomics — Leading RPA Technology Developer</p>
+          <p class="lit-summary">Provides a full range of glycerol-free and lyophilized RPA enzyme products, including lyophilized versions of UvsX, UvsY, gp32, and Bsu DNA Polymerase, as well as lyophilized RPA Master Mixes. Demonstrates the commercial viability and industry demand for freeze-dried isothermal amplification reagents.</p>
+          <a href="https://intactgenomics.com/wp-content/uploads/2026/05/Intact-Genomics-RPA-Products.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> View Product Catalog (PDF)
+          </a>
+        </div>
+
+        <!-- Literature 2 -->
+        <div class="lit-card">
+          <span class="lit-source">Commercial Kit</span>
+          <h4>Lyo-Ready RPA Kit — Thermo Fisher / Invitrogen</h4>
+          <p class="lit-journal">Thermo Fisher Scientific</p>
+          <p class="lit-summary">A commercially available glycerol-free RPA formulation designed specifically for lyophilization compatibility. Features high sensitivity (down to 1 copy detection) and rapid amplification (20 minutes). Demonstrates that leading reagent suppliers now offer lyophilization-ready RPA kits, validating the market direction.</p>
+          <a href="https://www.thermofisher.com/ma/en/home/life-science/pcr/isothermal-nucleic-acid-amplification/recombinase-polymerase-amplification.html" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> View Product Page
+          </a>
+        </div>
+
+        <!-- Literature 3 -->
+        <div class="lit-card">
+          <span class="lit-source">Peer-Reviewed Research</span>
+          <h4>An Extraction-Free, Lyophilized One-Pot RAA-CRISPR Assay for Point-of-Care Testing of <em>Haemophilus influenzae</em></h4>
+          <p class="lit-authors">Cao Y, Wang J, Fan Z, et al.</p>
+          <p class="lit-journal">Journal of Clinical Microbiology, 2025 | DOI: 10.1128/jcm.00535-25</p>
+          <p class="lit-summary">Developed an extraction-free, one-pot lyophilized RAA-CRISPR detection system (EFORCA) for point-of-care testing. The total cost per test is only $1.5-3.5. Validated with 77 clinical samples, achieving 95% sensitivity and 100% specificity. This study demonstrates the powerful synergy of combining lyophilized isothermal amplification with CRISPR-based detection for affordable, field-ready molecular diagnostics.</p>
+          <a href="https://doi.org/10.1128/jcm.00535-25" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> Read on ASM Journals
+          </a>
+        </div>
+
+        <!-- Literature 4 -->
+        <div class="lit-card">
+          <span class="lit-source">Peer-Reviewed Research</span>
+          <h4>Transferable, Easy-to-Use and Room-Temperature-Storable PCR Mixes for Microfluidic Molecular Diagnostics</h4>
+          <p class="lit-journal">PMC8353973 | PubMed Central</p>
+          <p class="lit-summary">Developed transferable lyophilized PCR reagent beads for room-temperature storage. Validated the use of accelerated stability testing (elevated temperature incubation) to predict real-time shelf life of lyophilized molecular diagnostic reagents — a methodology directly applicable to lyophilized RPA products. Demonstrates that freeze-dried nucleic acid amplification reagents can maintain full performance after extended ambient storage.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8353973/" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> Read on PMC
+          </a>
+        </div>
+
+        <!-- Literature 5 -->
+        <div class="lit-card">
+          <span class="lit-source">Peer-Reviewed Research</span>
+          <h4>A Lyophilized Open-Source RT-LAMP Assay for Molecular Diagnostics in Resource-Limited Settings</h4>
+          <p class="lit-journal">Life Science Alliance, 2025</p>
+          <p class="lit-summary">An open-source lyophilized RT-LAMP system using D-trehalose as the cryoprotectant. The lyophilized reagents maintained full performance after extended storage at room temperature and even at elevated temperatures (37°C+). This study provides a strong reference model for developing open-source lyophilized RPA reagent systems and validates D-trehalose as the preferred protectant for isothermal amplification enzymes.</p>
+          <a href="https://www.life-science-alliance.org/content/8/10/e202403167" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> Read on LSA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Process Flow -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Lyophilization Process Flow</h2>
+        <p>From enzyme expression to final packaging — our end-to-end lyophilized RPA enzyme production workflow</p>
+      </div>
+
+      <div class="process-timeline fade-in">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-dna" style="color:var(--primary-light); margin-right:0.5rem;"></i> Enzyme Expression &amp; Purification</h4>
+            <p>Recombinant RPA enzyme proteins are expressed in E. coli host systems and purified through affinity chromatography, ion exchange, and size exclusion steps to achieve high purity (>95%).</p>
+          </div>
+          <div class="timeline-dot">1</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-exchange-alt" style="color:var(--primary-light); margin-right:0.5rem;"></i> Glycerol Removal / Buffer Exchange</h4>
+            <p>Enzyme solutions undergo diafiltration or desalting column treatment to remove glycerol and exchange into a lyophilization-compatible buffer system (e.g., Tris-HEPES with trehalose).</p>
+          </div>
+          <div class="timeline-dot">2</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-flask" style="color:var(--primary-light); margin-right:0.5rem;"></i> Cryoprotectant Formulation</h4>
+            <p>Lyoprotectant (D-trehalose, sucrose, or combination) is added at optimised concentration. Additional excipients (bulking agents, surfactants, pH buffers) may be included based on the target format.</p>
+          </div>
+          <div class="timeline-dot">3</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-snowflake" style="color:var(--primary-light); margin-right:0.5rem;"></i> Filling &amp; Pre-Freezing</h4>
+            <p>Enzyme formulation is dispensed into vials or tray wells (for LyoBead format) and frozen to -40°C to -80°C. Controlled freezing rates ensure optimal ice crystal formation.</p>
+          </div>
+          <div class="timeline-dot">4</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-wind" style="color:var(--primary-light); margin-right:0.5rem;"></i> Primary Drying (Sublimation)</h4>
+            <p>Under vacuum, ice sublimes directly to vapour. Shelf temperature and chamber pressure are precisely controlled over 24-48 hours to remove ~95% of water content while preserving product structure.</p>
+          </div>
+          <div class="timeline-dot">5</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-fire" style="color:var(--primary-light); margin-right:0.5rem;"></i> Secondary Drying (Desorption)</h4>
+            <p>Temperature is gradually increased (20-40°C) under continued vacuum to remove bound/adsorbed water molecules. Residual moisture is reduced to the target level of &lt;3%.</p>
+          </div>
+          <div class="timeline-dot">6</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-clipboard-check" style="color:var(--primary-light); margin-right:0.5rem;"></i> Quality Control</h4>
+            <p>Rigorous testing including residual moisture content (Karl Fischer), enzyme activity assay, appearance inspection, sterility testing, endotoxin levels, and batch-to-batch consistency (CV &lt;10%).</p>
+          </div>
+          <div class="timeline-dot">7</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4><i class="fas fa-box-open" style="color:var(--primary-light); margin-right:0.5rem;"></i> Packaging &amp; Storage</h4>
+            <p>Vials are stoppered and sealed under inert gas (nitrogen/argon) in the lyophilizer chamber or a controlled-atmosphere glovebox. Final products are stored at room temperature pending distribution.</p>
+          </div>
+          <div class="timeline-dot">8</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Quality & Specifications -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Quality &amp; Specifications</h2>
+        <p>Rigorous quality standards ensure every lyophilized product meets performance and stability requirements</p>
+      </div>
+
+      <div class="spec-grid fade-in">
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-tint"></i></div>
+          <div class="spec-value">&lt;3%</div>
+          <div class="spec-label">Residual Moisture Content</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-bolt"></i></div>
+          <div class="spec-value">≥90%</div>
+          <div class="spec-label">Enzyme Activity Recovery</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-clock"></i></div>
+          <div class="spec-value">≥12 mo.</div>
+          <div class="spec-label">Room Temperature Stability (25°C)</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-thermometer-full"></i></div>
+          <div class="spec-value">37°C / 45°C</div>
+          <div class="spec-label">Accelerated Stability Testing</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-balance-scale"></i></div>
+          <div class="spec-value">CV &lt;10%</div>
+          <div class="spec-label">Batch-to-Batch Consistency</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-microscope"></i></div>
+          <div class="spec-value">Sterility</div>
+          <div class="spec-label">Sterility &amp; Endotoxin Testing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: CTA -->
+  <section class="lyo-cta">
+    <div class="container">
+      <h2>Ready to Go Freeze-Dry?</h2>
+      <p>Partner with Dangkang Bio to develop room-temperature-stable RPA enzyme solutions for your diagnostic applications. From custom formulation to scale-up manufacturing, we have the expertise and infrastructure to bring your lyophilized RPA products to market.</p>
+      <div class="cta-highlights">
+        <div class="cta-highlight-item">
+          <i class="fas fa-industry"></i>
+          <span>OEM / ODM Services</span>
+        </div>
+        <div class="cta-highlight-item">
+          <i class="fas fa-expand-arrows-alt"></i>
+          <span>Scale-Up Manufacturing</span>
+        </div>
+        <div class="cta-highlight-item">
+          <i class="fas fa-cog"></i>
+          <span>Custom Formulation</span>
+        </div>
+      </div>
+      <a href="contact.html" class="btn-cta">
+        <i class="fas fa-envelope"></i> Contact Our Lyophilization Team
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">DK</div>
+            <div class="logo-text">
+              <span class="logo-name">Dangkang Bio</span>
+              <span class="logo-tagline">Precision Detection</span>
+            </div>
+          </a>
+          <p>Building precise, convenient and accessible bio-detection products. Leveraging RPA isothermal amplification technology for one-stop solutions worldwide.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="rpa-enzymes.html">RPA Enzymes</a></li>
+            <li><a href="lyophilization.html">Lyophilization</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="products.html#reagents">Reagents</a></li>
+            <li><a href="products.html#detection-kits">Detection Kits</a></li>
+            <li><a href="products.html#instruments">Instruments</a></li>
+            <li><a href="products.html#custom">Custom Services</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Wuhan, China</li>
+            <li><i class="fas fa-envelope"></i> dangkangbio@163.com</li>
+            <li><i class="fas fa-phone"></i> +86-18162635786</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Wuhan Dangkang Bio-Technology Co., Ltd. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
