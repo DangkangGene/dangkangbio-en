@@ -1,6 +1,6 @@
-# Dangkang Bio - Australia Operations
+# Dangkang Bio Australia
 
-> **Wuhan Dangkang Gene Technology Co., Ltd.** — Global Expansion Hub
+> Australian master-distributor website for Wuhan Dangkang Bio-Technology Co., Ltd.
 
 This repository serves as the central project hub for Dangkang Bio's Australian market expansion, hosting our English website, technical documentation, regulatory materials, and business development resources.
 
@@ -46,7 +46,7 @@ dangkangbio-en/
 
 - **Temperature**: 37-42°C (no thermal cycler needed)
 - **Speed**: 5-20 minutes per reaction
-- **Sensitivity**: Single-copy detection
+- **Sensitivity**: Assay- and target-dependent; consult product specifications
 - **Portability**: Lyophilized reagents, minimal equipment
 
 ## 📦 Products
@@ -67,22 +67,16 @@ dangkangbio-en/
 - Environmental & Biosafety Monitoring
 - Customs & Border Inspection
 
-## 📋 Regulatory Compliance
+## 📋 Regulatory Positioning
 
-Our products targeting the Australian market comply with:
-- **TGA** (Therapeutic Goods Administration) IVD regulations
-- **NATA** (National Association of Testing Authorities) accreditation
-- **ISO 13485** Quality Management System
-- **ISO 14971** Risk Management
-
-See the `docs/regulatory/` directory for detailed guides.
+Product availability, intended use and regulatory status must be confirmed product by product. Unless expressly documented otherwise, website products should be treated as research, evaluation or non-clinical screening products and not as ARTG-included IVD medical devices. The regulatory documents in this repository are planning references, not evidence of approval, accreditation or certification.
 
 ## 🤝 Business Inquiries
 
 For partnership, distribution, or technical inquiries:
 - **Email**: dangkangbio@163.com
 - **Phone**: +86-18162635786
-- **Address**: Optics Valley Bio-City, East Lake High-Tech Development Zone, Wuhan, China
+- **Manufacturer**: Wuhan Dangkang Bio-Technology Co., Ltd., Wuhan, China
 
 ## 📄 Legal
 
@@ -90,4 +84,4 @@ Legal templates for business cooperation are provided in the `legal/templates/` 
 
 ## 📝 License
 
-© 2026 Wuhan Dangkang Gene Technology Co., Ltd. All rights reserved.
+© 2026 Dangkang Bio Australia. Dangkang Bio is a brand of Wuhan Dangkang Bio-Technology Co., Ltd.

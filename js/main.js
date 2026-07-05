@@ -44,8 +44,10 @@ function initMobileMenu() {
   if (!menuToggle || !navLinks) return;
   
   menuToggle.addEventListener('click', function() {
-    this.classList.toggle('active');
-    navLinks.classList.toggle('active');
+    const isOpen = this.classList.toggle('active');
+    navLinks.classList.toggle('active', isOpen);
+    this.setAttribute('aria-expanded', String(isOpen));
+    this.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
   });
   
   // Close menu when clicking on a link
@@ -54,6 +56,8 @@ function initMobileMenu() {
     link.addEventListener('click', function() {
       menuToggle.classList.remove('active');
       navLinks.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
     });
   });
   
@@ -62,6 +66,17 @@ function initMobileMenu() {
     if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
       menuToggle.classList.remove('active');
       navLinks.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      menuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.focus();
     }
   });
 }
@@ -74,6 +89,11 @@ function initScrollAnimations() {
   
   if (fadeElements.length === 0) return;
   
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    fadeElements.forEach(element => element.classList.add('visible'));
+    return;
+  }
+
   const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -177,13 +197,20 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       
       if (validateForm(this)) {
-        // Show success message
-        const successMsg = document.createElement('div');
-        successMsg.className = 'form-success';
-        successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent. We will contact you soon.';
-        
-        this.innerHTML = '';
-        this.appendChild(successMsg);
+        const data = new FormData(this);
+        const fullName = [data.get('firstName'), data.get('lastName')].filter(Boolean).join(' ');
+        const subject = `Dangkang Bio Australia enquiry — ${data.get('inquiryType') || 'General'}`;
+        const body = [
+          `Name: ${fullName}`,
+          `Organisation: ${data.get('company') || ''}`,
+          `Email: ${data.get('email') || ''}`,
+          `Phone: ${data.get('phone') || ''}`,
+          `Country: ${data.get('country') || ''}`,
+          `Products of interest: ${data.get('products') || ''}`,
+          '',
+          data.get('message') || ''
+        ].join('\n');
+        window.location.href = `mailto:dangkangbio@163.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       }
     });
   }
