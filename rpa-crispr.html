@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073b4c">
+  <link rel="icon" href="assets/dangkang-mark.png">
+  <meta name="description" content="How RPA amplification and CRISPR-Cas recognition work together, including readouts, integration strategies, applications, limitations and assay-development support.">
+  <meta name="keywords" content="RPA CRISPR, Cas12a, Cas13a, DETECTR, SHERLOCK, one-pot assay, lateral flow, fluorescence">
+  <title>RPA–CRISPR Technology &amp; Assay Development | Dangkang Bio Australia</title>
+  <link rel="canonical" href="https://dangkanggene.github.io/dangkangbio-en/rpa-crispr.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RPA–CRISPR Technology | Dangkang Bio Australia">
+  <meta property="og:description" content="Principles, integration strategies, applications, engineering constraints and development support for RPA–CRISPR workflows.">
+  <meta property="og:url" content="https://dangkanggene.github.io/dangkangbio-en/rpa-crispr.html">
+  <meta property="og:image" content="https://dangkanggene.github.io/dangkangbio-en/assets/dangkang-mark.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav class="navbar" aria-label="Primary navigation">
+    <div class="container"><div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><img src="assets/dangkang-mark.png" alt="" width="45" height="45"></div>
+        <div class="logo-text"><span class="logo-name">Dangkang Bio Australia</span><span class="logo-tagline">Australian Master Distributor</span></div>
+      </a>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="index.html">Home</a></li><li><a href="technology.html" class="active">Technology</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li><li><a href="rpa-enzymes.html">RPA Enzymes</a></li><li><a href="media.html">Media</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+    </div></div>
+  </nav>
+
+  <header class="crispr-hero">
+    <div class="container crispr-hero-grid">
+      <div>
+        <span class="eyebrow">Technology platform</span>
+        <h1>RPA–CRISPR: amplify fast, recognise precisely</h1>
+        <p>RPA increases the amount of a selected nucleic-acid target at a constant temperature. A programmable CRISPR-Cas system then confirms the amplified sequence and converts recognition into a measurable signal.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#services">Explore development support</a><a class="btn btn-secondary" href="#literature">View PubMed literature</a></div>
+      </div>
+      <div class="crispr-equation" role="img" aria-label="RPA amplification plus CRISPR recognition produces a readable signal">
+        <div><i class="fas fa-dna"></i><strong>RPA</strong><span>Amplify</span></div><b>+</b><div><i class="fas fa-crosshairs"></i><strong>CRISPR</strong><span>Recognise</span></div><b>=</b><div><i class="fas fa-signal"></i><strong>READOUT</strong><span>Report</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header"><span class="eyebrow">Division of labour</span><h2>How the combined workflow works</h2><p>Two biochemical functions are coupled, but each has a distinct job.</p></div>
+        <div class="process-lane">
+          <article><span>01</span><i class="fas fa-vial"></i><h3>Prepare the sample</h3><p>Release and, where required, purify target nucleic acid. Matrix quality can determine downstream performance.</p></article>
+          <article><span>02</span><i class="fas fa-copy"></i><h3>Amplify with RPA</h3><p>Recombinase-assisted primer targeting and strand-displacing polymerase generate amplicons under low, constant-temperature conditions.</p></article>
+          <article><span>03</span><i class="fas fa-bullseye"></i><h3>Recognise with Cas</h3><p>A crRNA guides Cas12a to complementary DNA. Cas13 systems instead recognise RNA and use an RNA reporter.</p></article>
+          <article><span>04</span><i class="fas fa-chart-line"></i><h3>Generate a signal</h3><p>Target binding activates collateral reporter cleavage, enabling fluorescence or appropriately designed lateral-flow readouts.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-grid">
+        <div>
+          <span class="eyebrow">Cas12a signal chemistry</span><h2>Cis recognition, trans reporting</h2>
+          <div class="mechanism-card"><div class="mechanism-icon">1</div><div><h3>Target-dependent cis cleavage</h3><p>Cas12a–crRNA binds a compatible double-stranded DNA target and cleaves that target. Sequence complementarity and PAM context contribute to recognition.</p></div></div>
+          <div class="mechanism-card"><div class="mechanism-icon">2</div><div><h3>Activated trans cleavage</h3><p>Target binding activates nonspecific cleavage of nearby single-stranded DNA reporters. Cas13 uses collateral RNA cleavage and an RNA reporter.</p></div></div>
+          <div class="mechanism-card"><div class="mechanism-icon">3</div><div><h3>Readable output</h3><p>Separating a fluorophore from its quencher produces fluorescence. Reporter designs can also translate cleavage into a lateral-flow band pattern.</p></div></div>
+        </div>
+        <aside class="signal-panel">
+          <span class="signal-state off"><i class="fas fa-link"></i><strong>Before activation</strong><small>Fluorophore and quencher remain connected; signal is suppressed.</small></span>
+          <i class="fas fa-arrow-down"></i>
+          <span class="signal-state on"><i class="fas fa-scissors"></i><strong>After target recognition</strong><small>Reporter cleavage separates the labels and releases signal.</small></span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-blue">
+      <div class="container">
+        <div class="section-header"><span class="eyebrow light">Workflow architecture</span><h2>Two-step and one-pot integration</h2><p>Integration design is a trade-off between biochemical control, operational simplicity and contamination management.</p></div>
+        <div class="strategy-grid">
+          <article><i class="fas fa-flask-vial"></i><h3>Two-step</h3><p>RPA is optimised first, then the amplicon is transferred to a CRISPR detection reaction.</p><strong>Strength:</strong><span>Independent optimisation and often stronger signal.</span><strong>Constraint:</strong><span>Open-tube transfer raises aerosol-contamination risk.</span></article>
+          <article><i class="fas fa-circle-nodes"></i><h3>Spatially separated, closed tube</h3><p>Amplification and detection chemistries share one closed device but remain physically separated until triggered.</p><strong>Strength:</strong><span>Reduced amplicon handling.</span><strong>Constraint:</strong><span>Device manufacture and timed fluid control add complexity.</span></article>
+          <article><i class="fas fa-droplet"></i><h3>Homogeneous one-pot</h3><p>RPA and CRISPR components react in the same solution, with kinetic, thermal, chemical or RNP controls used to manage timing.</p><strong>Strength:</strong><span>Simple closed-tube workflow.</span><strong>Constraint:</strong><span>Premature Cas activity can consume amplification templates.</span></article>
+        </div>
+        <div class="strategy-tags"><span>Suboptimal PAM tuning</span><span>crRNA engineering</span><span>Thermal staging</span><span>Chemical inhibition</span><span>RNP formation control</span><span>Orthogonal Cas systems</span></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header"><span class="eyebrow">Applications</span><h2>A flexible research and development platform</h2></div>
+        <div class="applications-grid">
+          <div class="app-item"><div class="app-icon"><i class="fas fa-shield-virus"></i></div><h4>Pathogen research</h4></div>
+          <div class="app-item"><div class="app-icon"><i class="fas fa-cow"></i></div><h4>Animal health</h4></div>
+          <div class="app-item"><div class="app-icon"><i class="fas fa-wheat-awn"></i></div><h4>Agriculture</h4></div>
+          <div class="app-item"><div class="app-icon"><i class="fas fa-utensils"></i></div><h4>Food screening</h4></div>
+          <div class="app-item"><div class="app-icon"><i class="fas fa-water"></i></div><h4>Environmental monitoring</h4></div>
+          <div class="app-item"><div class="app-icon"><i class="fas fa-microchip"></i></div><h4>Microfluidic integration</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header"><span class="eyebrow">Engineering reality</span><h2>Important limitations and risk controls</h2><p>High analytical potential does not remove the need for target-specific optimisation, controls and sample-to-answer validation.</p></div>
+        <div class="risk-grid">
+          <article><i class="fas fa-arrows-to-circle"></i><h3>Reaction competition</h3><p>In a homogeneous one-pot assay, early Cas activation can cleave templates or amplicons before RPA has accumulated sufficient product.</p></article>
+          <article><i class="fas fa-biohazard"></i><h3>Amplicon contamination</h3><p>Two-step transfer can release concentrated amplicons. Unidirectional workflow, closed consumables and appropriate controls are important.</p></article>
+          <article><i class="fas fa-layer-group"></i><h3>Multiplex crosstalk</h3><p>Primer competition, primer dimers and shared collateral-cleavage reporters can complicate target discrimination.</p></article>
+          <article><i class="fas fa-filter"></i><h3>Sample-matrix inhibition</h3><p>Fast lysis may leave inhibitors that affect RPA or Cas activity. Extraction requirements must be evaluated for each matrix.</p></article>
+          <article><i class="fas fa-chart-simple"></i><h3>Sampling biology</h3><p>Low, intermittent or spatially uneven target burden can produce negative results even when the analytical chemistry is sensitive.</p></article>
+          <article><i class="fas fa-gears"></i><h3>Translation and cost</h3><p>Microfluidics and automated timing can improve containment, but introduce manufacturing, quality-control and scale-up requirements.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section service-section" id="services">
+      <div class="container service-grid">
+        <div><span class="eyebrow light">Dangkang Bio Australia</span><h2>RPA–CRISPR assay-development support</h2><p>Coordinate reagents, enzymes, workflow design and manufacturer technical support through one Australian commercial contact.</p><a href="mailto:dangkangbio@163.com?subject=RPA-CRISPR%20Development%20Enquiry%20-%20Dr.%20Will" class="btn btn-primary">Discuss your project with Dr. Will</a></div>
+        <ol><li><strong>Target and workflow definition</strong><span>Target, sample matrix, intended readout and use environment</span></li><li><strong>RPA primer and reaction optimisation</strong><span>Amplification chemistry and interference screening</span></li><li><strong>Cas and reporter configuration</strong><span>Cas12a/Cas13a pathway, crRNA and readout selection</span></li><li><strong>Integration engineering</strong><span>Two-step, closed-tube or one-pot feasibility</span></li><li><strong>Format development</strong><span>Lyophilisation, portable readout and OEM options</span></li><li><strong>Verification planning</strong><span>Controls, inclusivity/exclusivity and matrix studies</span></li></ol>
+      </div>
+    </section>
+
+    <section class="section poster-showcase">
+      <div class="container poster-showcase-grid">
+        <div><span class="eyebrow">Client resource</span><h2>RPA–CRISPR assay-development poster</h2><p>A concise visual overview of the core workflow, Cas12a reporter chemistry, integration options, engineering challenges, application areas and development support.</p><a class="btn btn-primary" href="assets/posters/rpa-crispr-assay-development.png" target="_blank" rel="noopener">Open full-size poster</a></div>
+        <a href="assets/posters/rpa-crispr-assay-development.png" target="_blank" rel="noopener"><img src="assets/posters/rpa-crispr-assay-development.png" alt="RPA–CRISPR assay development poster by Dangkang Bio Australia"></a>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="literature">
+      <div class="container">
+        <div class="section-header"><span class="eyebrow">Selected evidence</span><h2>PubMed-indexed literature</h2><p>Foundational mechanisms and representative engineering studies. Performance values in individual papers are assay-specific.</p></div>
+        <div class="literature-grid">
+          <a class="literature-card" href="https://pubmed.ncbi.nlm.nih.gov/16756388/" target="_blank" rel="noopener"><span>RPA foundation · PLoS Biology</span><h3>DNA detection using recombination proteins</h3><p>The foundational description of recombinase-driven, low-temperature isothermal amplification.</p><b>PMID 16756388 ↗</b></a>
+          <a class="literature-card" href="https://pubmed.ncbi.nlm.nih.gov/29449511/" target="_blank" rel="noopener"><span>Cas12a mechanism · Science</span><h3>Target binding unleashes ssDNA trans cleavage</h3><p>Established target-activated collateral cleavage and the DETECTR concept.</p><b>PMID 29449511 ↗</b></a>
+          <a class="literature-card" href="https://pubmed.ncbi.nlm.nih.gov/28408723/" target="_blank" rel="noopener"><span>Cas13 platform · Science</span><h3>Nucleic acid detection with CRISPR-Cas13a</h3><p>Introduced SHERLOCK and Cas13 collateral reporter cleavage for nucleic-acid detection.</p><b>PMID 28408723 ↗</b></a>
+          <a class="literature-card" href="https://pubmed.ncbi.nlm.nih.gov/35635176/" target="_blank" rel="noopener"><span>One-pot engineering · Analytical Chemistry</span><h3>Improving one-pot RPA–CRISPR/Cas12a</h3><p>Directly examines template loss from Cas cleavage and a formulation strategy to improve one-pot efficiency.</p><b>PMID 35635176 ↗</b></a>
+          <a class="literature-card" href="https://pubmed.ncbi.nlm.nih.gov/38459454/" target="_blank" rel="noopener"><span>Multiplexing · CMBL</span><h3>Multiplex RPA–CRISPR/Cas12a POCT architecture</h3><p>A representative study of multiplex amplification and Cas12a signal conversion.</p><b>PMID 38459454 ↗</b></a>
+          <a class="literature-card" href="https://pubmed.ncbi.nlm.nih.gov/39333528/" target="_blank" rel="noopener"><span>Multiplex recognition · Nature Communications</span><h3>Split crRNA for RNA and DNA detection</h3><p>Explores split-crRNA engineering, multiplexing and RPA-coupled detection.</p><b>PMID 39333528 ↗</b></a>
+          <a class="literature-card" href="https://pubmed.ncbi.nlm.nih.gov/39244837/" target="_blank" rel="noopener"><span>Integrated workflow · Biosensors &amp; Bioelectronics</span><h3>Extraction-free one-pot RPA–CRISPR/Cas12a</h3><p>A target-specific example of one-pot timing and reduced sample-preparation workflow.</p><b>PMID 39244837 ↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon"><img src="assets/dangkang-mark.png" alt="" width="45" height="45"></div><div class="logo-text"><span class="logo-name">Dangkang Bio Australia</span><span class="logo-tagline">Australian Master Distributor</span></div></a><p>RPA reagents, detection formats, instruments and assay-development support for research and evaluation workflows.</p></div>
+      <div><h4>Technology</h4><ul class="footer-links"><li><a href="technology.html">RPA Technology</a></li><li><a href="rpa-crispr.html">RPA–CRISPR</a></li><li><a href="rpa-enzymes.html">RPA Enzymes</a></li><li><a href="lyophilization.html">Lyophilization</a></li></ul></div>
+      <div><h4>Explore</h4><ul class="footer-links"><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li><li><a href="media.html">Media</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Contact</h4><ul class="footer-links"><li><i class="fas fa-user"></i> Dr. Will</li><li><i class="fas fa-envelope"></i> <a href="mailto:dangkangbio@163.com">dangkangbio@163.com</a></li><li><i class="fas fa-phone"></i> <a href="tel:+8618162635786">+86&nbsp;181&nbsp;6263&nbsp;5786</a></li></ul></div></div>
+    <div class="regulatory-note"><strong>Important:</strong> Product availability, intended use and regulatory status vary by product and jurisdiction. Unless expressly stated otherwise, products and services shown are for research, evaluation or non-clinical screening use and are not included in the Australian Register of Therapeutic Goods (ARTG).</div>
+    <div class="footer-bottom"><p>&copy; 2026 Dangkang Bio Australia. Dangkang Bio is a brand of Wuhan Dangkang Bio-Technology Co., Ltd.</p></div>
+  </div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
